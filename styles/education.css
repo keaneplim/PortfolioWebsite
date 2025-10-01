@@ -1,0 +1,137 @@
+.education-section,
+.certificates-section {
+    padding: 80px 0;
+}
+
+.education-section {
+    background-color: var(--background);
+}
+
+.certificates-section {
+    background-color: var(--background-alt);
+}
+
+.education-item {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 32px;
+    background-color: var(--background-alt);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.education-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.education-date {
+    min-width: 140px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.institution {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.degree {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.education-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-content ul li {
+    padding-left: 24px;
+    margin-bottom: 8px;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.education-content ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.certificate-card {
+    background-color: var(--background);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.certificate-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 16px;
+}
+
+.certificate-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.certificate-card p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .education-date {
+        min-width: auto;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+}

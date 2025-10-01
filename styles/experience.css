@@ -1,0 +1,121 @@
+.experience-section {
+    padding: 80px 0;
+    background-color: var(--background);
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 180px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.experience-item {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 174px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 3px solid var(--background);
+    box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+.experience-date {
+    min-width: 140px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-top: 4px;
+}
+
+.experience-content {
+    flex: 1;
+    background-color: var(--background-alt);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.experience-content:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.experience-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.experience-content h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-content ul li {
+    padding-left: 24px;
+    margin-bottom: 8px;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.experience-content ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .experience-item {
+        flex-direction: column;
+        padding-left: 48px;
+    }
+
+    .experience-item::before {
+        left: 14px;
+    }
+
+    .experience-date {
+        min-width: auto;
+        margin-bottom: 8px;
+    }
+
+    .experience-content {
+        margin-left: 0;
+    }
+}

@@ -26,6 +26,9 @@ body {
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--background);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -203,4 +206,15 @@ main {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+@keyframes fadeInAnimation {
+    /* The starting point of the animation (completely transparent) */
+    0% {
+        opacity: 0;
+    }
+    /* The ending point of the animation (fully visible) */
+    100% {
+        opacity: 1;
+     }
 }
